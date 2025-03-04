@@ -1,0 +1,371 @@
+/* Monitoring.css - Styles for the HealthConnect monitoring dashboard */
+
+.monitoring-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    color: #333;
+  }
+  
+  /* Header section */
+  .monitoring-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .monitoring-header h1 {
+    color: #2d3748;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .monitoring-controls {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .control-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .control-group label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #718096;
+  }
+  
+  .metric-select, .time-select, .form-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    min-width: 160px;
+    font-size: 0.95rem;
+    color: #4a5568;
+  }
+  
+  .metric-select:focus, .time-select:focus, .form-select:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+  }
+  
+  /* Metric details section */
+  .metric-details {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .metric-info {
+    margin-bottom: 20px;
+  }
+  
+  .metric-info h2 {
+    color: #2d3748;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+  }
+  
+  .metric-info p {
+    color: #718096;
+    margin-bottom: 16px;
+  }
+  
+  .metric-stats {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  
+  .stat-item {
+    background-color: #f7fafc;
+    padding: 12px 16px;
+    border-radius: 6px;
+    min-width: 180px;
+  }
+  
+  .stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 4px;
+  }
+  
+  .stat-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .metric-chart {
+    background-color: #f7fafc;
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 20px;
+  }
+  
+  /* Monitoring sections */
+  .monitoring-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+  }
+  
+  .section h2 {
+    color: #2d3748;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+  }
+  
+  /* Connected devices section */
+  .devices-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .device-card {
+    background-color: #f7fafc;
+    border-radius: 6px;
+    padding: 16px;
+  }
+  
+  .device-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .device-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2d3748;
+  }
+  
+  .device-status {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+  
+  .device-status.connected {
+    background-color: #C6F6D5;
+    color: #2F855A;
+  }
+  
+  .device-status.disconnected {
+    background-color: #FED7D7;
+    color: #C53030;
+  }
+  
+  .device-details {
+    margin-bottom: 12px;
+  }
+  
+  .device-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #718096;
+  }
+  
+  .device-button, .add-device-button, .form-submit, .alert-button {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .device-button {
+    width: 100%;
+  }
+  
+  .device-button:hover, .add-device-button:hover, .form-submit:hover, .alert-button:hover {
+    background-color: #3182ce;
+  }
+  
+  .add-device-button {
+    margin-top: 8px;
+    background-color: white;
+    color: #4299e1;
+    border: 1px solid #4299e1;
+    width: 100%;
+  }
+  
+  .add-device-button:hover {
+    background-color: #ebf8ff;
+  }
+  
+  /* Manual data entry section */
+  .data-entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #718096;
+  }
+  
+  .form-input, .form-textarea {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+  }
+  
+  .form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+  }
+  
+  .form-textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  .form-submit {
+    align-self: flex-start;
+  }
+  
+  /* Health insights section */
+  .health-insights, .patient-monitoring {
+    grid-column: 1 / -1;
+  }
+  
+  .insights-list, .alerts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .insight-card, .alert-card {
+    background-color: #f7fafc;
+    border-radius: 6px;
+    padding: 16px;
+  }
+  
+  .insight-card h3, .alert-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #2d3748;
+  }
+  
+  .insight-card p {
+    margin-bottom: 8px;
+    color: #4a5568;
+  }
+  
+  .insight-recommendation {
+    font-style: italic;
+    color: #718096;
+  }
+  
+  /* Alert cards */
+  .alert-card {
+    border-left: 4px solid;
+  }
+  
+  .alert-card.high {
+    border-left-color: #f56565;
+  }
+  
+  .alert-card.medium {
+    border-left-color: #ed8936;
+  }
+  
+  .alert-card.low {
+    border-left-color: #ecc94b;
+  }
+  
+  .alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .alert-timestamp {
+    font-size: 0.85rem;
+    color: #718096;
+  }
+  
+  .alert-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .alert-button {
+    flex: 1;
+    font-size: 0.85rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .monitoring-sections {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .monitoring-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    
+    .monitoring-controls {
+      width: 100%;
+    }
+    
+    .metric-stats {
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .stat-item {
+      width: 100%;
+    }
+    
+    .devices-list, .insights-list, .alerts-list {
+      grid-template-columns: 1fr;
+    }
+  }

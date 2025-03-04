@@ -1,0 +1,188 @@
+/* Login.css - Styles for the HealthConnect login page */
+
+/* Base container styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f8fa;
+    margin-top: 30px;
+  
+  }
+  
+  /* Card styling */
+  .login-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+    padding: 32px;
+  }
+  
+  /* Header styles */
+  .login-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .login-header h2 {
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+  }
+  
+  .login-header p {
+    color: #718096;
+    font-size: 1rem;
+  }
+  
+  /* Tab button styles */
+  .login-tabs {
+    display: flex;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .tab-button {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 12px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #718096;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .tab-button.active {
+    color: #4299e1;
+    font-weight: 600;
+  }
+  
+  .tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4299e1;
+  }
+  
+  .tab-button:hover:not(.active) {
+    color: #4a5568;
+    background-color: #f7fafc;
+  }
+  
+  /* Form styles */
+  .login-form {
+    margin-bottom: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #4a5568;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+  }
+  
+  /* Login button */
+  .login-button {
+    width: 100%;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #3182ce;
+  }
+  
+  .login-button:active {
+    background-color: #2b6cb0;
+  }
+  
+  /* Footer styles */
+  .login-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  
+  .login-footer a {
+    color: #4299e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .login-footer a:hover {
+    color: #3182ce;
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 24px;
+    }
+    
+    .login-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .tab-button {
+      padding: 10px;
+    }
+    
+    .form-group input {
+      padding: 10px 14px;
+    }
+    
+    .login-button {
+      padding: 12px 16px;
+    }
+  }
+
+
+  .logo-container {
+    text-align: center;         /* Centers the logo horizontally */
+    margin-bottom:-180px;        /* Adjust the space between the logo and login box */
+  }
+  
+  .logo {
+    width:200px;             /* Smaller logo width */
+    height:200px;              /* Keep the aspect ratio intact */
+    display: block;             /* Ensures the image behaves as a block element */
+    margin: 0 auto; 
+    border-radius: 50%;            /* Center the logo in its container */
+  }

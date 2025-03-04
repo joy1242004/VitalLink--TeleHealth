@@ -1,0 +1,411 @@
+/* Main Container */
+.consultation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.consultation-header {
+  margin-bottom: 2rem;
+}
+
+.consultation-header h1 {
+  color: #2a7dc0;
+  margin-bottom: 1rem;
+}
+
+.pre-call-info {
+  background-color: #f5f9fc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pre-call-info p {
+  margin: 0.5rem 0;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.start-call-button {
+  background-color: #2a7dc0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-call-button:hover {
+  background-color: #1e6cb0;
+}
+
+/* Video Call Section */
+.video-call-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: center;
+  min-height: 600px;
+}
+
+.video-screens {
+  display: flex;
+  flex: 1;
+  position: center;
+  background-color: #111;
+  min-height: 500px;
+}
+
+.main-video {
+  width: 100%;
+  height: 100%;
+  position: center;
+}
+
+
+.placeholder-video {
+  width: 100%;
+  height: 100%;
+  background-color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.placeholder-video.small {
+  font-size: 1rem;
+}
+
+/* Call Controls */
+.call-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  gap: 1rem;
+}
+
+.control-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-button:hover {
+  background-color: #e0e0e0;
+}
+
+.control-button.end-call {
+  background-color: #e53935;
+  color: white;
+  padding: 0 1.5rem;
+  border-radius: 30px;
+  width: auto;
+  font-weight: 600;
+}
+
+.control-button.end-call:hover {
+  background-color: #d32f2f;
+}
+
+/* Icons for control buttons */
+.icon-mic::before {
+  content: "🎤";
+}
+
+.icon-camera::before {
+  content: "📹";
+}
+
+.icon-screen-share::before {
+  content: "📊";
+}
+
+.icon-chat::before {
+  content: "💬";
+}
+
+/* Chat Panel */
+.chat-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: white;
+  border-left: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chat-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #777;
+}
+
+.close-chat:hover {
+  color: #333;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message {
+  padding: 0.75rem;
+  border-radius: 18px;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.message.patient {
+  align-self: flex-end;
+  background-color: #e3f2fd;
+  color: #000;
+  border-bottom-right-radius: 4px;
+}
+
+.message.provider {
+  align-self: flex-start;
+  background-color: #f5f5f5;
+  color: #000;
+  border-bottom-left-radius: 4px;
+}
+
+.message.system {
+  align-self: center;
+  background-color: #fff3e0;
+  color: #795548;
+  font-style: italic;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #e0e0e0;
+  padding: 0.75rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.95rem;
+}
+
+.chat-input input:focus {
+  outline: none;
+  border-color: #2a7dc0;
+}
+
+.chat-input button {
+  background-color: #2a7dc0;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chat-input button:hover {
+  background-color: #1e6cb0;
+}
+
+/* Pre-consultation features */
+.consultation-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: #2a7dc0;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: #666;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.feature-button {
+  background-color: white;
+  color: #2a7dc0;
+  border: 1px solid #2a7dc0;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feature-button:hover {
+  background-color: #2a7dc0;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .video-call-container {
+    min-height: 450px;
+  }
+  
+  .video-screens {
+    min-height: 350px;
+  }
+  
+  .chat-panel {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-call-container {
+    min-height: 400px;
+  }
+  
+  .video-screens {
+    min-height: 300px;
+  }
+  
+  .chat-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .control-button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .call-controls {
+    gap: 0.5rem;
+  }
+  
+  .control-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .control-button.end-call {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .consultation-features {
+    grid-template-columns: 1fr;
+  }
+}
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+}
+
+.video-call-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  min-height: 600px;
+}
+/* Adjust the container width to give more space for the video */
+.video-call-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 110%;  /* Increase the width here */
+margin: 0 auto;
+padding: 20px;
+}
+
+/* Adjust iframe to be more flexible */
+.video-screens {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.main-video iframe {
+width: 100%;  /* Adjust the width for the video */
+height: 500px;  /* Height can also be adjusted based on your preference */
+}
+
